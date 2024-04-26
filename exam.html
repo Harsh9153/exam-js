@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="radio"/> -->
+    <input type="date" id="date"/>
+    <p id="error"></p>
+
+
+<input type="radio" name="gender"  value="male"/>Male
+<input type="radio" name="gender"  value="female"/>female
+<h3 id="title"></h3>
+
+
+
+    <!-- <input type="search"/> -->
+
+    <button onclick="submit()">submit</button>
+<script>
+function submit(){
+    let date=document.getElementById("date").value;
+
+
+    if(date == "")
+    {
+        let date=document.getElementById("error").innerHTML="Enter your date"
+    }
+    else{
+        document.getElementById("error").innerHTML=date;
+
+    }
+    let gender=document.querySelector('input[name="gender"]:cheched').value;
+
+     console.log(gender);
+     document.getElementById("title").innerHTML=gender;
+
+
+     
+}
+let hr =[
+            {
+                fname:"Harsh",
+                lname:"Desai",
+                age:15,
+                mail:"harshdesai600@gmail.com",
+            },
+            {
+                fname:"meet",
+                lname:"Desai",
+                age:24,
+                mail:"harshdesai600@gmail.com",
+            },
+            {
+                fname:"hram",
+                lname:"Desai",
+                age:24,
+                mail:"harshdesai600@gmail.com",
+            },
+            {
+                fname:"Harshil",
+                lname:"patel",
+                age:24,
+                mail:"harshdesai600@gmail.com",
+            },
+            {
+                fname:"Hardik",
+                lname:"Desai",
+                age:24,
+                mail:"harshdesai600@gmail.com",
+            },{
+                fname:"hram",
+                lname:"Desai",
+                age:10,
+                mail:"harshdesai600@gmail.com",
+            },
+         ];
+
+
+         let res = hr.filter((val)=>val.age>18);
+         
+         console.log(res);
+        
+
+</script>
+    
+</body>
+</html>
